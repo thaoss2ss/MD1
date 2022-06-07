@@ -2,9 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Sở thích của bạn</title>
+  <style>
+    h2{
+      color:white;
+      background: orangered;
+      text-align: center;
+    }
+    th{
+      color: blue;
+      text-align:right;
+    }
+    td{
+      color: red;
+    }
+  </style>
+
 </head>
 <body>
-
-</body>
+<form action="" method="post">
+  <h2>SỞ THÍCH CỦA BẠN</h2>
+  <table>
+    <tr>
+    <th><label for="họ và tên">Họ và tên</label></th>
+    <td colspan="3"><input type="text" name="yourname" id="họ và tên"></td>
+  </tr>
+    <tr>
+      <th><label for="email">Email</label></th>
+      <td colspan="3"><input style="width: 120px" type="email" name="email" id="email"></td>
+    </tr>
+    <tr>
+      <th><label>Sở thích</label></th>
+      <td><label for="thể thao"></label>
+          <input type="checkbox" name="tt" id="thể thao">Thể thao</td>
+      <td><label for="âm nhạc"></label>
+          <input type="checkbox" name="an" id="âm nhạc">Âm nhạc</td>
+      <td><label for="đọc sách"></label>
+          <input type="checkbox" name="ds" id="đọc sách">Đọc sách</td>
+    </tr>
+    <tr>
+      <td rowspan="3"></td><td><label for="lướt web"></label>
+      <input type="checkbox" name="lw" id="lướt web">Lướt web</td>
+      <td><label for="chơi game"></label>
+          <input type="checkbox" name="cg" id="chơi game">Chơi game</td>
+      <td><label for="điện ảnh"></label>
+          <input type="checkbox" name="da" id="điện ảnh">Điện ảnh</td>
+    </tr>
+    <tr>
+      <td><label for="du lịch"></label>
+          <input type="checkbox" name="dl" id="du lịch">Du lịch</td>
+    </tr>
+    <tr>
+      <td><button type="submit">Gửi thông tin</button></td>
+      <td><button type="reset">Nhập lại</button></td>
+    </tr>
+  </table>
+ </form>
 </html>
