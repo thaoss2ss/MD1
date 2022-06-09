@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>tiền tệ</title>
+</head>
+<body>
+<table>
+  <tr>
+    <td>Nhập giá trị</td>
+    <td>From </td>
+    <td>To</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>
+      <input type="number" id="X"></td>
+    <td>
+      <select id="from">
+        <option value="23000">VND</option>
+        <option value="1">USD</option>
+        <option value="1257">KRW</option>
+        <option value="133">JPY</option>
+      </select>
+    </td>
+    <td>
+      <select id="to">
+        <option value="1">USD</option>
+        <option value="23000">VND</option>
+        <option value="1257">KRW</option>
+        <option value="133">JPY</option>
+      </select>
+    </td>
+    <td>
+      <button onclick="sum()">Chuyển</button>
+    </td>
+  </tr>
+</table><br>
+<p id="average"></p>
+<script>
+  function sum() {
+    let X = +document.getElementById('X').value;
+    let from = +document.getElementById('from').value;
+    let to = +document.getElementById('to').value;
+     let average = (X*to)/from;
+    document.getElementById('average').innerHTML ="KẾT QUẢ=" +average;
+  }
+</script>
+</body>
+</html>
