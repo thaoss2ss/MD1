@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Hình tròn</title>
+</head>
+<body>
+<label for="r">Nhập Bán Kính r</label>
+<input type="number" id= "r" value="">
+<button onclick="sum()">Kết quả</button>
+<br><br>
+<p id="S">Diện Tích F</p>
+<br>
+<p id="C">Chu Vi C</p>
+<script>
+  function sum(){
+    let r = +document.getElementById('r').value;
+    let PI = Math.PI
+    S = Math.pow(r,2)*PI;
+    document.getElementById('S').innerHTML="Diện Tích="+ S;
+    C = (r*2)*PI ;
+    document.getElementById('C').innerHTML="Chu Vi="+ C;
+
+  }
+
+</script>
+</body>
+</html>
