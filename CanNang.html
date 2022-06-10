@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cân Nặng </title>
+</head>
+<body>
+<h1>TÍNH CHỈ SỐ CÂN NẶNG</h1><br>
+<label for="Can">Nhập Cân Nặng:(Kg) </label>
+<input type="text" id="Can"><br><br>
+<label for="Cao">Nhập Chiều Cao:(M)</label>
+<input type="text" id="Cao">
+<br><br>
+<button onclick="kiemtra()">Kiểm Tra</button>
+<p id="result"></p>
+<script>
+  function kiemtra(){
+    let Can = +document.getElementById('Can').value;
+    let Cao = +document.getElementById('Cao').value;
+    let bmi = Can / (Math.pow(Cao,2));
+    let result;
+    if(bmi<18.5)
+      result = "Underweight"
+    else if( bmi < 25){
+      result = "Nomarl"}
+    else if( bmi < 30){
+      result = "Overweight"}
+    else
+    {result = "Obese"}
+
+
+  document.getElementById('result').innerHTML="Chỉ Số BMI Của Bạn Là :" + bmi+". Bạn đang " + result  }
+
+</script>
+</body>
+</html>

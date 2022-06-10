@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tiền Điện Tháng</title>
+</head>
+<body>
+<label for="a">Lượng Điện Tiêu Thụ</label>
+<input type="number" id="a" value="">
+<button onclick="sum()">Tính Tiền</button>
+<p id="Tong"></p>
+<script>
+  function sum(){
+  let a = +document.getElementById('a').value;
+  let Tong ;
+  if(a>0 && a<=50){
+    Tong = a*1600;
+    document.getElementById('Tong').innerHTML="Tổng Tiền :" +Tong+ "VND"
+  } else if (a<=100){
+    Tong = 50*1600 +(a-50)*1700;
+    document.getElementById('Tong').innerHTML="Tổng Tiền :" +Tong+ "VND"
+  } else if (a<=200){
+    Tong = 50*1600 + 50*1700 + (a-100)*2000;
+    document.getElementById('Tong').innerHTML="Tổng Tiền :" +Tong+ "VND"
+  } else if (a<=300){
+    Tong = 50*1600 + 50*1700 + 100*2000 + (a-200)*2500;
+    document.getElementById('Tong').innerHTML="Tổng Tiền :" +Tong+ "VND"
+  } else if (a<=400) {
+    Tong = 50*1600 + 50*1700 + 100*2000 + 100*2500 + (a-300)*2800;
+    document.getElementById('Tong').innerHTML="Tổng Tiền :" +Tong+ "VND"
+  } else {
+    Tong = 50*1600 + 50*1700 + 100*2000 + 100*2500 + 100*2800 + (a-400)*2900;
+    document.getElementById('Tong').innerHTML="Tổng Tiền :" +Tong+ "VND"
+  }
+
+  }
+</script>
+</body>
+</html>
