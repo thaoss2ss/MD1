@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Máy Tính Đơn Giản</title>
+  <style>
+    table{
+      border-collapse: collapse;
+      border-radius: 3%;
+    }
+     tr,td{
+      width: 41px;
+      text-align: center;
+      background-color: whitesmoke;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+<input type="text" id="So" placeholder="Nhập Số" value="" style="width: 200px">
+<table>
+  <tr>
+  <td><button type="button" name="btn" value="1" onclick="inputValue(this.value)" style="width: 50px">1</button></td>
+  <td><button type="button" name="btn" value="2" onclick="inputValue(this.value)" style="width: 50px">2</button></td>
+  <td><button type="button" name="btn" value="3" onclick="inputValue(this.value)" style="width: 50px">3</button></td>
+  <td><button type="button" name="su" value="+" onclick="inputValue(this.value)" style="width: 50px">+</button></td>
+  </tr>
+  <tr>
+    <td><button type="button" name="btn" value="4" onclick="inputValue(this.value)" style="width: 50px">4</button></td>
+    <td><button type="button" name="btn" value="5" onclick="inputValue(this.value)" style="width: 50px">5</button></td>
+    <td><button type="button" name="btn" value="6" onclick="inputValue(this.value)" style="width: 50px">6</button></td>
+    <td><button type="button" name="su" value="-" onclick="inputValue(this.value)" style="width: 50px">-</button></td>
+  </tr>
+  <tr>
+    <td><button type="button" name="btn" value="7" onclick="inputValue(this.value)" style="width: 50px">7</button></td>
+    <td><button type="button" name="btn" value="8" onclick="inputValue(this.value)" style="width: 50px">8</button></td>
+    <td><button type="button" name="btn" value="9" onclick="inputValue(this.value)" style="width: 50px">9</button></td>
+    <td><button type="button" name="su" value="*" onclick="inputValue(this.value)" style="width: 50px">*</button></td>
+  </tr>
+  <tr>
+    <td><button type="button" onclick="xoa()" style="width: 50px"> AC </button></td>
+    <td><button type="button" name="btn" value="0" onclick="inputValue(this.value)" style="width: 50px">0</button></td>
+    <td><button  name="result" onclick="result();" style="width: 50px"> = </button></td>
+    <td><button type="button" name="su" value="/" onclick="inputValue(this.value)" style="width: 50px">/</button></td>
+  </tr>
+</table>
+<script>
+  let view = document.getElementById("So");
+  function inputValue(value) {
+    view.value += value;
+  }
+  function result() {
+    let result = eval(view.value);
+    view.value = result;
+  }
+  function xoa() {
+    view.value="";
+  }
+</script>
+</body>
+</html>
